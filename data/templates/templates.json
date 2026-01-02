@@ -1,0 +1,816 @@
+{
+  "テンプレート定義_バージョン": "1.0",
+  "更新日": "2025-12-29",
+  "テンプレート": [
+    {
+      "template_id": "TEMPLATE_001",
+      "name": "デート向けカジュアルコーディネート（春）",
+      "scene": "デート",
+      "style": "カジュアル",
+      "season": "春",
+      "price_range": {
+        "min": 5000,
+        "max": 10000
+      },
+      "moteru_score": 4.5,
+      "description": "デートシーンでモテる春のカジュアルコーディネート。清潔感とトレンド性を重視。Demna方向の実験的なデザインを活用。",
+      "items": [
+        {
+          "item_type": "シャツ",
+          "required": true,
+          "conditions": {
+            "colors": ["白", "ベージュ", "ライトブルー", "ライトグレー"],
+            "design": ["シンプル", "トレンド"],
+            "cleanliness": "高",
+            "trendiness": "高",
+            "price_range": {
+              "min": 3000,
+              "max": 5000
+            },
+            "materials": ["綿", "リネン", "ポリエステル"],
+            "fit": ["オーバーサイズ推奨", "レギュラー"]
+          }
+        },
+        {
+          "item_type": "パンツ",
+          "required": true,
+          "conditions": {
+            "type": ["オーバーサイズ必須"],
+            "specific_types": ["バギー", "ワイド", "パラシュート", "カーゴ"],
+            "colors": ["黒", "ネイビー", "ベージュ", "カーキ"],
+            "oversize_required": true,
+            "oversize_definition": {
+              "waist": "オーバーサイズ",
+              "hip": "オーバーサイズ",
+              "thigh": "オーバーサイズ（特にボリューミー）",
+              "hem": "オーバーサイズ（特にボリューミー）"
+            },
+            "simple": true,
+            "price_range": {
+              "min": 3000,
+              "max": 5000
+            },
+            "materials": ["デニム", "コットン", "ナイロン"],
+            "fit": "オーバーサイズ必須",
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "靴",
+          "required": true,
+          "conditions": {
+            "type": ["スニーカー", "ローファー"],
+            "colors": ["白", "ベージュ", "黒"],
+            "brand_priority": true,
+            "brand_note": "できるだけ良いブランドを優先",
+            "cleanliness": "高",
+            "price_range": {
+              "min": 5000,
+              "max": 10000
+            },
+            "design": ["シンプル", "トレンド"],
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、ブランドの質が高く、見た目や質感が高級に見えるものを優先"
+          }
+        }
+      ]
+    },
+    {
+      "template_id": "TEMPLATE_002",
+      "name": "デート向けカジュアルコーディネート（夏）",
+      "scene": "デート",
+      "style": "カジュアル",
+      "season": "夏",
+      "price_range": {
+        "min": 5000,
+        "max": 10000
+      },
+      "moteru_score": 4.5,
+      "description": "デートシーンでモテる夏のカジュアルコーディネート。清潔感とトレンド性を重視。Demna方向の実験的なデザインを活用。",
+      "items": [
+        {
+          "item_type": "トップス",
+          "required": true,
+          "conditions": {
+            "specific_types": ["Tシャツ", "ポロシャツ", "シャツ"],
+            "colors": ["白", "ベージュ", "ライトブルー", "ライトグレー", "ブラック"],
+            "design": ["シンプル", "トレンド", "オーバーサイズ推奨"],
+            "cleanliness": "高",
+            "trendiness": "高",
+            "price_range": {
+              "min": 2000,
+              "max": 4000
+            },
+            "materials": ["綿", "リネン", "ポリエステル"],
+            "fit": ["オーバーサイズ推奨", "レギュラー"]
+          }
+        },
+        {
+          "item_type": "パンツ",
+          "required": true,
+          "conditions": {
+            "type": ["オーバーサイズ必須"],
+            "specific_types": ["バギー", "ワイド", "パラシュート", "カーゴ"],
+            "colors": ["黒", "ネイビー", "ベージュ", "カーキ", "白"],
+            "oversize_required": true,
+            "oversize_definition": {
+              "waist": "オーバーサイズ",
+              "hip": "オーバーサイズ",
+              "thigh": "オーバーサイズ（特にボリューミー）",
+              "hem": "オーバーサイズ（特にボリューミー）"
+            },
+            "simple": true,
+            "price_range": {
+              "min": 3000,
+              "max": 5000
+            },
+            "materials": ["デニム", "コットン", "ナイロン"],
+            "fit": "オーバーサイズ必須",
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "靴",
+          "required": true,
+          "conditions": {
+            "type": ["スニーカー", "ローファー", "サンダル"],
+            "colors": ["白", "ベージュ", "黒"],
+            "brand_priority": true,
+            "brand_note": "できるだけ良いブランドを優先",
+            "cleanliness": "高",
+            "price_range": {
+              "min": 5000,
+              "max": 10000
+            },
+            "design": ["シンプル", "トレンド"],
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、ブランドの質が高く、見た目や質感が高級に見えるものを優先"
+          }
+        }
+      ]
+    },
+    {
+      "template_id": "TEMPLATE_003",
+      "name": "デート向けカジュアルコーディネート（秋）",
+      "scene": "デート",
+      "style": "カジュアル",
+      "season": "秋",
+      "price_range": {
+        "min": 5000,
+        "max": 10000
+      },
+      "moteru_score": 4.5,
+      "description": "デートシーンでモテる秋のカジュアルコーディネート。清潔感とトレンド性を重視。Demna方向の実験的なデザインを活用。",
+      "items": [
+        {
+          "item_type": "トップス",
+          "required": true,
+          "conditions": {
+            "specific_types": ["シャツ", "Tシャツ", "パーカー"],
+            "colors": ["白", "ベージュ", "ライトブルー", "ライトグレー", "ブラック", "ネイビー"],
+            "design": ["シンプル", "トレンド", "オーバーサイズ推奨"],
+            "cleanliness": "高",
+            "trendiness": "高",
+            "price_range": {
+              "min": 2000,
+              "max": 4000
+            },
+            "materials": ["綿", "コットン", "ポリエステル"],
+            "fit": ["オーバーサイズ推奨", "レギュラー"]
+          }
+        },
+        {
+          "item_type": "パンツ",
+          "required": true,
+          "conditions": {
+            "type": ["オーバーサイズ必須"],
+            "specific_types": ["バギー", "ワイド", "パラシュート", "カーゴ"],
+            "colors": ["黒", "ネイビー", "ベージュ", "カーキ", "グレー"],
+            "oversize_required": true,
+            "oversize_definition": {
+              "waist": "オーバーサイズ",
+              "hip": "オーバーサイズ",
+              "thigh": "オーバーサイズ（特にボリューミー）",
+              "hem": "オーバーサイズ（特にボリューミー）"
+            },
+            "simple": true,
+            "price_range": {
+              "min": 3000,
+              "max": 5000
+            },
+            "materials": ["デニム", "コットン", "ナイロン"],
+            "fit": "オーバーサイズ必須",
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "アウター",
+          "required": false,
+          "recommended": true,
+          "conditions": {
+            "specific_types": ["ジャケット", "コート"],
+            "type": ["オーバーサイズ推奨"],
+            "oversize_types": ["パワーショルダー", "ロングコート"],
+            "colors": ["黒", "ネイビー", "ベージュ", "グレー"],
+            "price_range": {
+              "min": 5000,
+              "max": 10000
+            },
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "靴",
+          "required": true,
+          "conditions": {
+            "type": ["スニーカー", "ローファー", "ブーツ"],
+            "colors": ["白", "ベージュ", "黒", "ブラウン"],
+            "brand_priority": true,
+            "brand_note": "できるだけ良いブランドを優先",
+            "cleanliness": "高",
+            "price_range": {
+              "min": 5000,
+              "max": 10000
+            },
+            "design": ["シンプル", "トレンド"],
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、ブランドの質が高く、見た目や質感が高級に見えるものを優先"
+          }
+        }
+      ]
+    },
+    {
+      "template_id": "TEMPLATE_004",
+      "name": "デート向けカジュアルコーディネート（冬）",
+      "scene": "デート",
+      "style": "カジュアル",
+      "season": "冬",
+      "price_range": {
+        "min": 5000,
+        "max": 10000
+      },
+      "moteru_score": 4.5,
+      "description": "デートシーンでモテる冬のカジュアルコーディネート。清潔感とトレンド性を重視。Demna方向の実験的なデザインを活用。",
+      "items": [
+        {
+          "item_type": "トップス",
+          "required": true,
+          "conditions": {
+            "specific_types": ["シャツ", "Tシャツ", "パーカー", "セーター"],
+            "colors": ["白", "ベージュ", "ライトブルー", "ライトグレー", "ブラック", "ネイビー"],
+            "design": ["シンプル", "トレンド", "オーバーサイズ推奨"],
+            "cleanliness": "高",
+            "trendiness": "高",
+            "price_range": {
+              "min": 2000,
+              "max": 4000
+            },
+            "materials": ["綿", "コットン", "ウール", "ポリエステル"],
+            "fit": ["オーバーサイズ推奨", "レギュラー"]
+          }
+        },
+        {
+          "item_type": "パンツ",
+          "required": true,
+          "conditions": {
+            "type": ["オーバーサイズ必須"],
+            "specific_types": ["バギー", "ワイド", "パラシュート", "カーゴ"],
+            "colors": ["黒", "ネイビー", "ベージュ", "カーキ", "グレー"],
+            "oversize_required": true,
+            "oversize_definition": {
+              "waist": "オーバーサイズ",
+              "hip": "オーバーサイズ",
+              "thigh": "オーバーサイズ（特にボリューミー）",
+              "hem": "オーバーサイズ（特にボリューミー）"
+            },
+            "simple": true,
+            "price_range": {
+              "min": 3000,
+              "max": 5000
+            },
+            "materials": ["デニム", "コットン", "ナイロン"],
+            "fit": "オーバーサイズ必須",
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "アウター",
+          "required": true,
+          "conditions": {
+            "specific_types": ["ジャケット", "コート"],
+            "type": ["オーバーサイズ推奨"],
+            "oversize_types": ["パワーショルダー", "ロングコート"],
+            "colors": ["黒", "ネイビー", "ベージュ", "グレー"],
+            "price_range": {
+              "min": 5000,
+              "max": 10000
+            },
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "靴",
+          "required": true,
+          "conditions": {
+            "type": ["スニーカー", "ローファー", "ブーツ"],
+            "colors": ["白", "ベージュ", "黒", "ブラウン"],
+            "brand_priority": true,
+            "brand_note": "できるだけ良いブランドを優先",
+            "cleanliness": "高",
+            "price_range": {
+              "min": 5000,
+              "max": 10000
+            },
+            "design": ["シンプル", "トレンド"],
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、ブランドの質が高く、見た目や質感が高級に見えるものを優先"
+          }
+        }
+      ]
+    },
+    {
+      "template_id": "TEMPLATE_005",
+      "name": "仕事向けビジネスコーディネート（春）",
+      "scene": "仕事",
+      "style": "ビジネス",
+      "season": "春",
+      "price_range": {
+        "min": 10000,
+        "max": 15000
+      },
+      "moteru_score": 4.0,
+      "description": "仕事シーンで適切な春のビジネスコーディネート。品格と機能性を重視。Demna方向の実験的なデザインを活用。",
+      "items": [
+        {
+          "item_type": "シャツ",
+          "required": true,
+          "conditions": {
+            "colors": ["白", "ライトブルー", "ベージュ"],
+            "design": ["シンプル", "フォーマル"],
+            "dignity": "高",
+            "functionality": "高",
+            "price_range": {
+              "min": 3000,
+              "max": 5000
+            },
+            "materials": ["綿", "ポリエステル"],
+            "fit": ["レギュラー", "スリム"]
+          }
+        },
+        {
+          "item_type": "パンツ",
+          "required": true,
+          "conditions": {
+            "type": ["オーバーサイズ必須"],
+            "specific_types": ["スーツパンツ（オーバーサイズ版）", "チノパン（オーバーサイズ版）"],
+            "colors": ["黒", "ネイビー", "グレー"],
+            "oversize_required": true,
+            "oversize_definition": {
+              "waist": "オーバーサイズ",
+              "hip": "オーバーサイズ",
+              "thigh": "オーバーサイズ（特にボリューミー）",
+              "hem": "オーバーサイズ（特にボリューミー）"
+            },
+            "dignity": "高",
+            "price_range": {
+              "min": 5000,
+              "max": 8000
+            },
+            "materials": ["ウール", "ポリエステル", "コットン"],
+            "fit": "オーバーサイズ必須",
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "靴",
+          "required": true,
+          "conditions": {
+            "type": ["革靴", "ローファー"],
+            "colors": ["黒", "ブラウン"],
+            "brand_priority": true,
+            "brand_note": "できるだけ良いブランドを優先",
+            "dignity": "高",
+            "price_range": {
+              "min": 8000,
+              "max": 12000
+            },
+            "design": ["シンプル", "フォーマル"],
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、ブランドの質が高く、見た目や質感が高級に見えるものを優先"
+          }
+        }
+      ]
+    },
+    {
+      "template_id": "TEMPLATE_006",
+      "name": "仕事向けビジネスコーディネート（夏）",
+      "scene": "仕事",
+      "style": "ビジネス",
+      "season": "夏",
+      "price_range": {
+        "min": 10000,
+        "max": 15000
+      },
+      "moteru_score": 4.0,
+      "description": "仕事シーンで適切な夏のビジネスコーディネート。品格と機能性を重視。Demna方向の実験的なデザインを活用。",
+      "items": [
+        {
+          "item_type": "シャツ",
+          "required": true,
+          "conditions": {
+            "colors": ["白", "ライトブルー", "ベージュ"],
+            "design": ["シンプル", "フォーマル"],
+            "dignity": "高",
+            "functionality": "高",
+            "functionality_note": "夏のため、通気性など",
+            "price_range": {
+              "min": 3000,
+              "max": 5000
+            },
+            "materials": ["綿", "ポリエステル（通気性の良いもの）"],
+            "fit": ["レギュラー", "スリム"]
+          }
+        },
+        {
+          "item_type": "パンツ",
+          "required": true,
+          "conditions": {
+            "type": ["オーバーサイズ必須"],
+            "specific_types": ["スーツパンツ（オーバーサイズ版）", "チノパン（オーバーサイズ版）"],
+            "colors": ["黒", "ネイビー", "グレー", "ベージュ"],
+            "oversize_required": true,
+            "oversize_definition": {
+              "waist": "オーバーサイズ",
+              "hip": "オーバーサイズ",
+              "thigh": "オーバーサイズ（特にボリューミー）",
+              "hem": "オーバーサイズ（特にボリューミー）"
+            },
+            "dignity": "高",
+            "price_range": {
+              "min": 5000,
+              "max": 8000
+            },
+            "materials": ["ウール", "ポリエステル", "コットン（通気性の良いもの）"],
+            "fit": "オーバーサイズ必須",
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "靴",
+          "required": true,
+          "conditions": {
+            "type": ["革靴", "ローファー"],
+            "colors": ["黒", "ブラウン"],
+            "brand_priority": true,
+            "brand_note": "できるだけ良いブランドを優先",
+            "dignity": "高",
+            "price_range": {
+              "min": 8000,
+              "max": 12000
+            },
+            "design": ["シンプル", "フォーマル"],
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、ブランドの質が高く、見た目や質感が高級に見えるものを優先"
+          }
+        }
+      ]
+    },
+    {
+      "template_id": "TEMPLATE_007",
+      "name": "仕事向けビジネスコーディネート（秋）",
+      "scene": "仕事",
+      "style": "ビジネス",
+      "season": "秋",
+      "price_range": {
+        "min": 10000,
+        "max": 15000
+      },
+      "moteru_score": 4.0,
+      "description": "仕事シーンで適切な秋のビジネスコーディネート。品格と機能性を重視。Demna方向の実験的なデザインを活用。",
+      "items": [
+        {
+          "item_type": "シャツ",
+          "required": true,
+          "conditions": {
+            "colors": ["白", "ライトブルー", "ベージュ"],
+            "design": ["シンプル", "フォーマル"],
+            "dignity": "高",
+            "functionality": "高",
+            "price_range": {
+              "min": 3000,
+              "max": 5000
+            },
+            "materials": ["綿", "ポリエステル"],
+            "fit": ["レギュラー", "スリム"]
+          }
+        },
+        {
+          "item_type": "パンツ",
+          "required": true,
+          "conditions": {
+            "type": ["オーバーサイズ必須"],
+            "specific_types": ["スーツパンツ（オーバーサイズ版）", "チノパン（オーバーサイズ版）"],
+            "colors": ["黒", "ネイビー", "グレー"],
+            "oversize_required": true,
+            "oversize_definition": {
+              "waist": "オーバーサイズ",
+              "hip": "オーバーサイズ",
+              "thigh": "オーバーサイズ（特にボリューミー）",
+              "hem": "オーバーサイズ（特にボリューミー）"
+            },
+            "dignity": "高",
+            "price_range": {
+              "min": 5000,
+              "max": 8000
+            },
+            "materials": ["ウール", "ポリエステル", "コットン"],
+            "fit": "オーバーサイズ必須",
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "アウター",
+          "required": false,
+          "recommended": true,
+          "conditions": {
+            "specific_types": ["ジャケット", "コート"],
+            "type": ["オーバーサイズ推奨"],
+            "oversize_types": ["パワーショルダー", "ロングコート"],
+            "colors": ["黒", "ネイビー", "グレー"],
+            "price_range": {
+              "min": 5000,
+              "max": 10000
+            },
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "靴",
+          "required": true,
+          "conditions": {
+            "type": ["革靴", "ローファー"],
+            "colors": ["黒", "ブラウン"],
+            "brand_priority": true,
+            "brand_note": "できるだけ良いブランドを優先",
+            "dignity": "高",
+            "price_range": {
+              "min": 8000,
+              "max": 12000
+            },
+            "design": ["シンプル", "フォーマル"],
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、ブランドの質が高く、見た目や質感が高級に見えるものを優先"
+          }
+        }
+      ]
+    },
+    {
+      "template_id": "TEMPLATE_008",
+      "name": "仕事向けビジネスコーディネート（冬）",
+      "scene": "仕事",
+      "style": "ビジネス",
+      "season": "冬",
+      "price_range": {
+        "min": 10000,
+        "max": 15000
+      },
+      "moteru_score": 4.0,
+      "description": "仕事シーンで適切な冬のビジネスコーディネート。品格と機能性を重視。Demna方向の実験的なデザインを活用。",
+      "items": [
+        {
+          "item_type": "シャツ",
+          "required": true,
+          "conditions": {
+            "colors": ["白", "ライトブルー", "ベージュ"],
+            "design": ["シンプル", "フォーマル"],
+            "dignity": "高",
+            "functionality": "高",
+            "price_range": {
+              "min": 3000,
+              "max": 5000
+            },
+            "materials": ["綿", "ポリエステル"],
+            "fit": ["レギュラー", "スリム"]
+          }
+        },
+        {
+          "item_type": "パンツ",
+          "required": true,
+          "conditions": {
+            "type": ["オーバーサイズ必須"],
+            "specific_types": ["スーツパンツ（オーバーサイズ版）", "チノパン（オーバーサイズ版）"],
+            "colors": ["黒", "ネイビー", "グレー"],
+            "oversize_required": true,
+            "oversize_definition": {
+              "waist": "オーバーサイズ",
+              "hip": "オーバーサイズ",
+              "thigh": "オーバーサイズ（特にボリューミー）",
+              "hem": "オーバーサイズ（特にボリューミー）"
+            },
+            "dignity": "高",
+            "price_range": {
+              "min": 5000,
+              "max": 8000
+            },
+            "materials": ["ウール", "ポリエステル", "コットン"],
+            "fit": "オーバーサイズ必須",
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "アウター",
+          "required": true,
+          "conditions": {
+            "specific_types": ["ジャケット", "コート"],
+            "type": ["オーバーサイズ推奨"],
+            "oversize_types": ["パワーショルダー", "ロングコート"],
+            "colors": ["黒", "ネイビー", "グレー"],
+            "price_range": {
+              "min": 5000,
+              "max": 10000
+            },
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "靴",
+          "required": true,
+          "conditions": {
+            "type": ["革靴", "ローファー"],
+            "colors": ["黒", "ブラウン"],
+            "brand_priority": true,
+            "brand_note": "できるだけ良いブランドを優先",
+            "dignity": "高",
+            "price_range": {
+              "min": 8000,
+              "max": 12000
+            },
+            "design": ["シンプル", "フォーマル"],
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、ブランドの質が高く、見た目や質感が高級に見えるものを優先"
+          }
+        }
+      ]
+    },
+    {
+      "template_id": "TEMPLATE_009",
+      "name": "カジュアルコーディネート（春）",
+      "scene": "カジュアル",
+      "style": "カジュアル",
+      "season": "春",
+      "price_range": {
+        "min": 5000,
+        "max": 10000
+      },
+      "moteru_score": 4.0,
+      "description": "カジュアルシーンで適切な春のコーディネート。着心地とストリート×ラグジュアリーの融合が重要。下半身のオーバーサイズを必須とする。",
+      "items": [
+        {
+          "item_type": "トップス",
+          "required": true,
+          "conditions": {
+            "specific_types": ["Tシャツ", "シャツ", "パーカー"],
+            "colors": ["白", "ベージュ", "ライトブルー", "ライトグレー", "ブラック"],
+            "design": ["シンプル", "トレンド", "オーバーサイズ推奨"],
+            "comfort": "高",
+            "price_range": {
+              "min": 2000,
+              "max": 4000
+            },
+            "materials": ["綿", "コットン", "ポリエステル"],
+            "fit": ["オーバーサイズ推奨", "レギュラー"]
+          }
+        },
+        {
+          "item_type": "パンツ",
+          "required": true,
+          "conditions": {
+            "type": ["オーバーサイズ必須"],
+            "specific_types": ["バギー", "ワイド", "パラシュート", "カーゴ"],
+            "colors": ["黒", "ネイビー", "ベージュ", "カーキ"],
+            "oversize_required": true,
+            "oversize_definition": {
+              "waist": "オーバーサイズ",
+              "hip": "オーバーサイズ",
+              "thigh": "オーバーサイズ（特にボリューミー）",
+              "hem": "オーバーサイズ（特にボリューミー）"
+            },
+            "comfort": "高",
+            "price_range": {
+              "min": 3000,
+              "max": 5000
+            },
+            "materials": ["デニム", "コットン", "ナイロン"],
+            "fit": "オーバーサイズ必須",
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "靴",
+          "required": true,
+          "conditions": {
+            "type": ["スニーカー", "ローファー"],
+            "colors": ["白", "ベージュ", "黒"],
+            "brand_priority": true,
+            "brand_note": "できるだけ良いブランドを優先",
+            "comfort": "高",
+            "price_range": {
+              "min": 5000,
+              "max": 10000
+            },
+            "design": ["シンプル", "トレンド"],
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、ブランドの質が高く、見た目や質感が高級に見えるものを優先"
+          }
+        }
+      ]
+    },
+    {
+      "template_id": "TEMPLATE_010",
+      "name": "カジュアルコーディネート（夏）",
+      "scene": "カジュアル",
+      "style": "カジュアル",
+      "season": "夏",
+      "price_range": {
+        "min": 5000,
+        "max": 10000
+      },
+      "moteru_score": 4.0,
+      "description": "カジュアルシーンで適切な夏のコーディネート。着心地とストリート×ラグジュアリーの融合が重要。下半身のオーバーサイズを必須とする。",
+      "items": [
+        {
+          "item_type": "トップス",
+          "required": true,
+          "conditions": {
+            "specific_types": ["Tシャツ", "ポロシャツ", "シャツ"],
+            "colors": ["白", "ベージュ", "ライトブルー", "ライトグレー", "ブラック"],
+            "design": ["シンプル", "トレンド", "オーバーサイズ推奨"],
+            "comfort": "高",
+            "price_range": {
+              "min": 2000,
+              "max": 4000
+            },
+            "materials": ["綿", "リネン", "ポリエステル"],
+            "fit": ["オーバーサイズ推奨", "レギュラー"]
+          }
+        },
+        {
+          "item_type": "パンツ",
+          "required": true,
+          "conditions": {
+            "type": ["オーバーサイズ必須"],
+            "specific_types": ["バギー", "ワイド", "パラシュート", "カーゴ"],
+            "colors": ["黒", "ネイビー", "ベージュ", "カーキ", "白"],
+            "oversize_required": true,
+            "oversize_definition": {
+              "waist": "オーバーサイズ",
+              "hip": "オーバーサイズ",
+              "thigh": "オーバーサイズ（特にボリューミー）",
+              "hem": "オーバーサイズ（特にボリューミー）"
+            },
+            "comfort": "高",
+            "price_range": {
+              "min": 3000,
+              "max": 5000
+            },
+            "materials": ["デニム", "コットン", "ナイロン"],
+            "fit": "オーバーサイズ必須",
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、見た目や質感が高級に見えるものを優先"
+          }
+        },
+        {
+          "item_type": "靴",
+          "required": true,
+          "conditions": {
+            "type": ["スニーカー", "ローファー", "サンダル"],
+            "colors": ["白", "ベージュ", "黒"],
+            "brand_priority": true,
+            "brand_note": "できるだけ良いブランドを優先",
+            "comfort": "高",
+            "price_range": {
+              "min": 5000,
+              "max": 10000
+            },
+            "design": ["シンプル", "トレンド"],
+            "quality_focus": true,
+            "quality_note": "価格が高くなくても、ブランドの質が高く、見た目や質感が高級に見えるものを優先"
+          }
+        }
+      ]
+    }
+  ]
+}

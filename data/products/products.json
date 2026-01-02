@@ -1,0 +1,240 @@
+{
+  "products": [
+    {
+      "product_id": "PROD_001",
+      "name": "オーバーサイズ バギーデニムパンツ",
+      "category": "パンツ",
+      "subcategory": "デニム",
+      "brand": "ストリートブランドA",
+      "price": 4980,
+      "original_price": 6980,
+      "currency": "JPY",
+      "url": "https://example.com/product/001",
+      "affiliate_url": "https://affiliate.example.com/001",
+      "image_url": "https://example.com/image/001.jpg",
+      "images": [
+        "https://example.com/image/001_1.jpg",
+        "https://example.com/image/001_2.jpg"
+      ],
+      "colors": ["黒", "ネイビー", "カーキ"],
+      "sizes": ["M", "L", "XL"],
+      "materials": ["綿", "ポリエステル"],
+      "returnable": true,
+      "in_stock": true,
+      "evaluation": {
+        "moteru_score": 4.5,
+        "uniqueness": 4.0,
+        "silhouette": 5.0,
+        "street_luxury_fusion": 4.5,
+        "reaction_score": 4.5,
+        "confidence_score": 4.0,
+        "oversize_lower_body": true,
+        "oversize_definition": {
+          "waist": "オーバーサイズ",
+          "hip": "オーバーサイズ",
+          "thigh": "オーバーサイズ（特にボリューミー）",
+          "hem": "オーバーサイズ（特にボリューミー）"
+        },
+        "luxury_atmosphere": 4.5,
+        "quality_focus": true
+      },
+      "attributes": {
+        "scene": ["デート", "カジュアル"],
+        "style": ["カジュアル", "ストリート"],
+        "season": ["春", "夏", "秋"],
+        "fit": "オーバーサイズ必須",
+        "design": ["シンプル", "トレンド"],
+        "cleanliness": "高",
+        "trendiness": "高"
+      },
+      "description": "デートシーンに最適なオーバーサイズデニムパンツ。モテる度が高い。",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    },
+    {
+      "product_id": "PROD_002",
+      "name": "オーバーサイズ ワイドカーゴパンツ",
+      "category": "パンツ",
+      "subcategory": "カーゴ",
+      "brand": "ストリートブランドB",
+      "price": 5500,
+      "original_price": 7500,
+      "currency": "JPY",
+      "url": "https://example.com/product/002",
+      "affiliate_url": "https://affiliate.example.com/002",
+      "image_url": "https://example.com/image/002.jpg",
+      "images": [
+        "https://example.com/image/002_1.jpg",
+        "https://example.com/image/002_2.jpg"
+      ],
+      "colors": ["黒", "カーキ", "グレー"],
+      "sizes": ["M", "L", "XL"],
+      "materials": ["コットン", "ナイロン"],
+      "returnable": true,
+      "in_stock": true,
+      "evaluation": {
+        "moteru_score": 4.3,
+        "uniqueness": 4.5,
+        "silhouette": 5.0,
+        "street_luxury_fusion": 4.0,
+        "reaction_score": 4.3,
+        "confidence_score": 4.0,
+        "oversize_lower_body": true,
+        "oversize_definition": {
+          "waist": "オーバーサイズ",
+          "hip": "オーバーサイズ",
+          "thigh": "オーバーサイズ（特にボリューミー）",
+          "hem": "オーバーサイズ（特にボリューミー）"
+        },
+        "luxury_atmosphere": 4.0,
+        "quality_focus": true
+      },
+      "attributes": {
+        "scene": ["デート", "カジュアル", "ストリート"],
+        "style": ["カジュアル", "ストリート"],
+        "season": ["春", "夏", "秋", "冬"],
+        "fit": "オーバーサイズ必須",
+        "design": ["トレンド"],
+        "cleanliness": "高",
+        "trendiness": "高"
+      },
+      "description": "トレンド感のあるオーバーサイズカーゴパンツ。ストリートスタイルに最適。",
+      "created_at": "2024-01-02T00:00:00Z",
+      "updated_at": "2024-01-02T00:00:00Z"
+    },
+    {
+      "product_id": "PROD_003",
+      "name": "シンプル オーバーサイズTシャツ",
+      "category": "トップス",
+      "subcategory": "Tシャツ",
+      "brand": "ベーシックブランドA",
+      "price": 2800,
+      "original_price": 3500,
+      "currency": "JPY",
+      "url": "https://example.com/product/003",
+      "affiliate_url": "https://affiliate.example.com/003",
+      "image_url": "https://example.com/image/003.jpg",
+      "images": [
+        "https://example.com/image/003_1.jpg"
+      ],
+      "colors": ["白", "ブラック", "ベージュ"],
+      "sizes": ["M", "L", "XL"],
+      "materials": ["綿", "ポリエステル"],
+      "returnable": true,
+      "in_stock": true,
+      "evaluation": {
+        "moteru_score": 4.0,
+        "uniqueness": 3.5,
+        "silhouette": 4.0,
+        "street_luxury_fusion": 3.5,
+        "reaction_score": 4.0,
+        "confidence_score": 4.5,
+        "oversize_lower_body": false,
+        "luxury_atmosphere": 3.5,
+        "quality_focus": true
+      },
+      "attributes": {
+        "scene": ["デート", "カジュアル"],
+        "style": ["カジュアル"],
+        "season": ["春", "夏", "秋"],
+        "fit": "オーバーサイズ推奨",
+        "design": ["シンプル"],
+        "cleanliness": "高",
+        "trendiness": "中"
+      },
+      "description": "シンプルで清潔感のあるオーバーサイズTシャツ。コーディネートのベースに最適。",
+      "created_at": "2024-01-03T00:00:00Z",
+      "updated_at": "2024-01-03T00:00:00Z"
+    },
+    {
+      "product_id": "PROD_004",
+      "name": "高級感のあるスニーカー",
+      "category": "靴",
+      "subcategory": "スニーカー",
+      "brand": "有名ブランドA",
+      "price": 12000,
+      "original_price": 15000,
+      "currency": "JPY",
+      "url": "https://example.com/product/004",
+      "affiliate_url": "https://affiliate.example.com/004",
+      "image_url": "https://example.com/image/004.jpg",
+      "images": [
+        "https://example.com/image/004_1.jpg",
+        "https://example.com/image/004_2.jpg"
+      ],
+      "colors": ["白", "ブラック", "ベージュ"],
+      "sizes": ["26", "27", "28"],
+      "materials": ["レザー", "合成皮革"],
+      "returnable": true,
+      "in_stock": true,
+      "evaluation": {
+        "moteru_score": 4.8,
+        "uniqueness": 4.5,
+        "silhouette": 4.5,
+        "street_luxury_fusion": 5.0,
+        "reaction_score": 5.0,
+        "confidence_score": 4.5,
+        "oversize_lower_body": false,
+        "luxury_atmosphere": 5.0,
+        "quality_focus": true,
+        "brand_priority": true
+      },
+      "attributes": {
+        "scene": ["デート", "カジュアル"],
+        "style": ["カジュアル", "ストリート"],
+        "season": ["春", "夏", "秋", "冬"],
+        "fit": "レギュラー",
+        "design": ["シンプル", "トレンド"],
+        "cleanliness": "高",
+        "trendiness": "高"
+      },
+      "description": "高級感のあるスニーカー。ブランドの質が高く、モテる度が非常に高い。",
+      "created_at": "2024-01-04T00:00:00Z",
+      "updated_at": "2024-01-04T00:00:00Z"
+    },
+    {
+      "product_id": "PROD_005",
+      "name": "オーバーサイズ シャツ",
+      "category": "トップス",
+      "subcategory": "シャツ",
+      "brand": "ベーシックブランドB",
+      "price": 4200,
+      "original_price": 5800,
+      "currency": "JPY",
+      "url": "https://example.com/product/005",
+      "affiliate_url": "https://affiliate.example.com/005",
+      "image_url": "https://example.com/image/005.jpg",
+      "images": [
+        "https://example.com/image/005_1.jpg"
+      ],
+      "colors": ["白", "ライトブルー", "ベージュ"],
+      "sizes": ["M", "L", "XL"],
+      "materials": ["綿", "リネン"],
+      "returnable": true,
+      "in_stock": true,
+      "evaluation": {
+        "moteru_score": 4.2,
+        "uniqueness": 3.5,
+        "silhouette": 4.0,
+        "street_luxury_fusion": 4.0,
+        "reaction_score": 4.2,
+        "confidence_score": 4.5,
+        "oversize_lower_body": false,
+        "luxury_atmosphere": 4.0,
+        "quality_focus": true
+      },
+      "attributes": {
+        "scene": ["デート", "仕事", "カジュアル"],
+        "style": ["カジュアル", "ビジネス"],
+        "season": ["春", "夏", "秋"],
+        "fit": "オーバーサイズ推奨",
+        "design": ["シンプル", "トレンド"],
+        "cleanliness": "高",
+        "trendiness": "高"
+      },
+      "description": "清潔感のあるオーバーサイズシャツ。デートや仕事に使える。",
+      "created_at": "2024-01-05T00:00:00Z",
+      "updated_at": "2024-01-05T00:00:00Z"
+    }
+  ]
+}
