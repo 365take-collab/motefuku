@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Header from '../../../components/Header'
@@ -78,7 +78,7 @@ const upsellOffers: { [key: string]: UpsellOffer } = {
   },
 }
 
-export default function UpsellPurchasePage() {
+function UpsellPurchaseContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const offerId = searchParams.get('offer_id')
@@ -254,5 +254,26 @@ export default function UpsellPurchasePage() {
       </main>
       <Footer />
     </>
+  )
+}
+
+export default function UpsellPurchasePage() {
+  return (
+    <Suspense fallback={
+      <>
+        <Header />
+        <main className="min-h-screen bg-[#0a0a0a]">
+          <div className="container mx-auto px-6 py-24 max-w-7xl">
+            <div className="text-center">
+              <div className="inline-block animate-spin rounded-full h-12 w-12 border-2 border-[#f5f5f5] border-t-transparent"></div>
+              <p className="text-[#9ca3af] mt-6 luxury-text">読み込み中...</p>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </>
+    }>
+      <UpsellPurchaseContent />
+    </Suspense>
   )
 }
