@@ -230,15 +230,15 @@ export default function Home() {
     <main className="min-h-screen bg-[#0a0a0a]">
       <Header />
 
-      {/* ヒーローセクション - クリーンでシンプル */}
+      {/* ヒーローセクション - 簡潔に */}
       <div className="relative bg-[#0a0a0a] border-b border-[#2a2a2a]">
-        <div className="container mx-auto px-6 py-16 max-w-7xl">
+        <div className="container mx-auto px-6 py-20 max-w-7xl">
           {/* ヒーローテキスト */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h1 className="text-5xl md:text-6xl font-bold text-[#f5f5f5] mb-4 luxury-heading tracking-tight">
               モテる服を最安値で。
             </h1>
-            <p className="text-xl md:text-2xl text-[#9ca3af] mb-8 luxury-text font-light">
+            <p className="text-xl md:text-2xl text-[#9ca3af] mb-6 luxury-text font-light">
               ナンパ師監修のモテるファッション × 複数サイトから最安値を自動比較
             </p>
             
@@ -257,10 +257,27 @@ export default function Home() {
                 <span className="text-[#f5f5f5] font-medium text-sm">返品可能サイトのみ</span>
               </div>
             </div>
-          </div>
 
-          {/* 検索フォーム - シンプルで使いやすい */}
-          <div className="bg-[#1a1a1a] rounded-lg border border-[#2a2a2a] shadow-sm p-8 max-w-5xl mx-auto">
+            {/* CTA */}
+            <div className="flex flex-col items-center gap-4">
+              <Link
+                href="/products"
+                className="luxury-button-primary px-8 py-4 text-base font-semibold"
+              >
+                今すぐモテるコーディネートを見つける
+              </Link>
+              <p className="text-xs text-[#9ca3af]">
+                ⚡ 700人実績のナンパ師監修 × 最安値保証 × 返品可能サイトのみ
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 検索フォームセクション */}
+      <div className="bg-[#1a1a1a] border-b border-[#2a2a2a] py-12">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="bg-[#0a0a0a] rounded-lg border border-[#2a2a2a] shadow-sm p-8">
             <div className="mb-6">
               <h2 className="text-2xl font-bold text-[#f5f5f5] mb-2 luxury-heading">コーディネートを探す</h2>
               <p className="text-[#9ca3af] text-sm">シーン、予算、スタイルから最適なコーディネートを見つけましょう</p>
@@ -268,7 +285,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               <div>
                 <label className="block text-sm font-medium text-[#f5f5f5] mb-2">シーン</label>
-                <select className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#0a0a0a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-all">
+                <select className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#1a1a1a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-all">
                   <option>シーンを選ぶ</option>
                   <option>デート</option>
                   <option>仕事</option>
@@ -277,7 +294,7 @@ export default function Home() {
               </div>
               <div>
                 <label className="block text-sm font-medium text-[#f5f5f5] mb-2">予算</label>
-                <select className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#0a0a0a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-all">
+                <select className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#1a1a1a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-all">
                   <option>予算を選ぶ</option>
                   <option>5,000円以下</option>
                   <option>5,000-10,000円</option>
@@ -287,7 +304,7 @@ export default function Home() {
               </div>
               <div>
                 <label className="block text-sm font-medium text-[#f5f5f5] mb-2">スタイル</label>
-                <select className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#0a0a0a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-all">
+                <select className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#1a1a1a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-all">
                   <option>スタイルを選ぶ</option>
                   <option>カジュアル</option>
                   <option>ビジネス</option>
@@ -295,12 +312,12 @@ export default function Home() {
                 </select>
               </div>
             </div>
-            <button className="w-full luxury-button-primary py-4 text-base font-semibold">
+            <Link
+              href="/products"
+              className="block w-full luxury-button-primary py-4 text-base font-semibold text-center"
+            >
               今すぐ無料でモテるコーディネートを見つける
-            </button>
-            <p className="text-xs text-center text-[#9ca3af] mt-3">
-              ⚡ 700人実績のナンパ師監修 × 最安値保証 × 返品可能サイトのみ
-            </p>
+            </Link>
           </div>
         </div>
       </div>
