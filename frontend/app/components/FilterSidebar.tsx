@@ -11,6 +11,7 @@ interface FilterSidebarProps {
     scene?: string
     style?: string
     keyword?: string
+    brand?: string
     sort?: string
   }
   onFilterChange: (filters: any) => void
@@ -26,10 +27,11 @@ export default function FilterSidebar({ searchParams, onFilterChange, onClose }:
     scene: searchParams.scene || '',
     style: searchParams.style || '',
     keyword: searchParams.keyword || '',
+    brand: searchParams.brand || '',
     sort: searchParams.sort || 'moteru_score_desc',
   })
 
-  const [openSections, setOpenSections] = useState<Set<string>>(new Set(['category', 'price']))
+  const [openSections, setOpenSections] = useState<Set<string>>(new Set(['brand', 'category', 'price']))
 
   const toggleSection = (section: string) => {
     setOpenSections((prev) => {
@@ -58,6 +60,7 @@ export default function FilterSidebar({ searchParams, onFilterChange, onClose }:
       scene: '',
       style: '',
       keyword: '',
+      brand: '',
       sort: 'moteru_score_desc',
     }
     setLocalFilters(clearedFilters)
@@ -89,6 +92,38 @@ export default function FilterSidebar({ searchParams, onFilterChange, onClose }:
             >
               ×
             </button>
+          )}
+        </div>
+
+        {/* ブランド */}
+        <div className="border-b border-[#2a2a2a] pb-4">
+          <button
+            onClick={() => toggleSection('brand')}
+            className="w-full flex items-center justify-between text-[#f5f5f5] font-medium mb-3"
+          >
+            <span>ブランド</span>
+            <span className="text-[#9ca3af]">
+              {openSections.has('brand') ? '−' : '+'}
+            </span>
+          </button>
+          {openSections.has('brand') && (
+            <div className="space-y-2 max-h-64 overflow-y-auto">
+              {['UNIQLO', 'ZARA', 'H&M', 'GU', '無印良品', 'コムサ・デ・モード', 'BEAMS', 'UNITED ARROWS', 'SHIPS', 'ナイキ', 'アディダス', 'プーマ', 'リーバイス', 'ラルフローレン', 'トミーヒルフィガー'].map((brand) => (
+                <label key={brand} className="flex items-center gap-2 cursor-pointer group">
+                  <input
+                    type="radio"
+                    name="brand"
+                    value={brand}
+                    checked={localFilters.brand === brand}
+                    onChange={(e) => handleFilterChange('brand', e.target.value)}
+                    className="w-4 h-4 text-[#d4af37] bg-[#1a1a1a] border-[#2a2a2a] focus:ring-[#d4af37] focus:ring-2"
+                  />
+                  <span className="text-sm text-[#9ca3af] group-hover:text-[#f5f5f5] transition-colors">
+                    {brand}
+                  </span>
+                </label>
+              ))}
+            </div>
           )}
         </div>
 

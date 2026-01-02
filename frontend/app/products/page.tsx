@@ -33,6 +33,7 @@ interface SearchParams {
   scene?: string
   style?: string
   keyword?: string
+  brand?: string
   sort?: 'price_asc' | 'price_desc' | 'moteru_score_desc' | 'created_at_desc'
   page?: number
 }
@@ -68,6 +69,7 @@ export default function ProductsPage() {
         if (searchParams.scene) params.append('scene', searchParams.scene)
         if (searchParams.style) params.append('style', searchParams.style)
         if (searchParams.keyword) params.append('keyword', searchParams.keyword)
+        if (searchParams.brand) params.append('brand', searchParams.brand)
         if (searchParams.sort) params.append('sort', searchParams.sort)
         params.append('page', page.toString())
         params.append('limit', '20')
@@ -99,6 +101,7 @@ export default function ProductsPage() {
       scene: filters.scene || undefined,
       style: filters.style || undefined,
       keyword: filters.keyword || undefined,
+      brand: filters.brand || undefined,
       sort: (filters.sort as SearchParams['sort']) || 'moteru_score_desc'
     })
     setPage(1)

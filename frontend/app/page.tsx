@@ -675,6 +675,40 @@ export default function Home() {
         {/* 最近閲覧した商品セクション */}
         <RecentlyViewedSection />
 
+        {/* 人気ブランドセクション */}
+        <section className="mb-24">
+          <div className="mb-8">
+            <h2 className="text-4xl font-semibold text-[#f5f5f5] mb-3 luxury-heading tracking-tight">人気ブランドから探す</h2>
+            <p className="text-[#9ca3af] luxury-text">
+              ブランド別にモテる服を探せます
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {['UNIQLO', 'ZARA', 'H&M', 'GU', '無印良品', 'コムサ・デ・モード', 'BEAMS', 'UNITED ARROWS', 'SHIPS', 'ナイキ', 'アディダス', 'プーマ'].map((brand) => (
+              <Link
+                key={brand}
+                href={`/products?brand=${encodeURIComponent(brand)}`}
+                className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-4 hover:border-[#3a3a3a] transition-colors group"
+              >
+                <div className="text-center">
+                  <div className="text-3xl mb-2 opacity-60 group-hover:opacity-100 transition-opacity">👔</div>
+                  <p className="text-sm text-[#f5f5f5] font-medium group-hover:text-white transition-colors">
+                    {brand}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6 text-center">
+            <Link
+              href="/products"
+              className="inline-block px-6 py-3 bg-[#1a1a1a] border border-[#2a2a2a] text-[#f5f5f5] rounded-lg text-sm font-medium hover:border-[#3a3a3a] transition-colors"
+            >
+              すべてのブランドを見る
+            </Link>
+          </div>
+        </section>
+
         </div>
       </main>
       <Footer />
