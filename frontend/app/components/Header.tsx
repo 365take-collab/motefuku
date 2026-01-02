@@ -53,15 +53,15 @@ export default function Header() {
   }
 
   return (
-    <header className="bg-[#0a0a0a]/95 backdrop-blur-sm border-b border-[#2a2a2a] sticky top-0 z-50 shadow-lg">
-      <div className="container mx-auto px-6 py-5 max-w-7xl">
+    <header className="bg-[#0a0a0a] border-b border-[#2a2a2a] sticky top-0 z-50">
+      <div className="container mx-auto px-6 py-4 max-w-7xl">
         <div className="flex items-center justify-between">
           <Link href="/">
-            <h1 className="text-2xl font-semibold text-[#f5f5f5] tracking-tight luxury-heading hover:text-[#d4af37] transition-colors cursor-pointer">
+            <h1 className="text-2xl font-semibold text-[#f5f5f5] tracking-tight luxury-heading hover:opacity-70 transition-opacity cursor-pointer">
               モテ服
             </h1>
           </Link>
-          <nav className="flex items-center gap-6">
+          <nav className="flex items-center gap-8">
             {navItems.map((item) => {
               const active = isActive(item.href, item.label)
               return (
@@ -70,7 +70,7 @@ export default function Header() {
                   href={item.href}
                   className={`text-sm transition-colors cursor-pointer font-medium ${
                     active
-                      ? 'text-[#d4af37] hover:text-[#d4af37]'
+                      ? 'text-[#f5f5f5]'
                       : 'text-[#9ca3af] hover:text-[#f5f5f5]'
                   }`}
                 >
@@ -97,7 +97,7 @@ export default function Header() {
                 />
               </svg>
               {favoriteCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-[#d4af37] text-[#0a0a0a] text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-2 -right-2 bg-white text-[#0a0a0a] text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                   {favoriteCount > 9 ? '9+' : favoriteCount}
                 </span>
               )}
@@ -121,7 +121,7 @@ export default function Header() {
                 />
               </svg>
               {cartItemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-[#d4af37] text-[#0a0a0a] text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-2 -right-2 bg-white text-[#0a0a0a] text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                   {cartItemCount > 9 ? '9+' : cartItemCount}
                 </span>
               )}

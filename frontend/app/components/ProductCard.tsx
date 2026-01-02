@@ -92,71 +92,48 @@ export default function ProductCard({ product, onQuickView }: ProductCardProps) 
       }}
     >
       <Link href={`/products/${product.product_id}`} className="block">
-        {/* 商品画像エリア */}
-        <div className="relative w-full aspect-square bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#1a1a1a] overflow-hidden">
+        {/* 商品画像エリア - 大きな画像 */}
+        <div className="relative w-full aspect-square bg-[#1a1a1a] overflow-hidden rounded-lg">
           {/* 画像切り替えアニメーション */}
           {images.map((image, idx) => (
             <div
               key={idx}
-              className={`absolute inset-0 transition-opacity duration-500 ${
+              className={`absolute inset-0 transition-opacity duration-300 ${
                 imageIndex === idx ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-7xl opacity-40">👔</div>
+              <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a]">
+                <div className="text-7xl opacity-20">👔</div>
               </div>
             </div>
           ))}
           
           {/* 画像切り替えインジケーター */}
           {images.length > 1 && (
-            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
+            <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-1.5">
               {images.map((_, idx) => (
                 <div
                   key={idx}
-                  className={`w-1.5 h-1.5 rounded-full transition-all ${
-                    imageIndex === idx ? 'bg-[#d4af37] w-4' : 'bg-white/40'
+                  className={`h-1 rounded-full transition-all ${
+                    imageIndex === idx ? 'bg-white w-6' : 'bg-white/30 w-1'
                   }`}
                 />
               ))}
             </div>
           )}
-          
-          {/* ホバー時のオーバーレイ */}
-          <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-300 ${
-            hovered ? 'opacity-100' : 'opacity-0'
-          }`} />
-
-          {/* クイックアクションボタン（ホバー時表示） */}
-          <div className={`absolute inset-0 flex items-center justify-center gap-3 transition-opacity duration-300 ${
-            hovered ? 'opacity-100' : 'opacity-0'
-          }`}>
-            <button
-              onClick={handleQuickView}
-              className="px-6 py-3 bg-white/95 text-[#0a0a0a] rounded-lg text-sm font-semibold hover:bg-white transition-all transform hover:scale-105 shadow-lg"
-            >
-              クイックビュー
-            </button>
-            <button
-              onClick={handleAddToCart}
-              className="px-6 py-3 bg-[#d4af37] text-[#0a0a0a] rounded-lg text-sm font-semibold hover:bg-[#c9a030] transition-all transform hover:scale-105 shadow-lg"
-            >
-              カートに追加
-            </button>
-          </div>
 
           {/* お気に入りボタン */}
           <button
             onClick={handleFavorite}
-            className={`absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+            className={`absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 ${
               isFavorite(product.product_id)
-                ? 'bg-[#d4af37] text-[#0a0a0a]'
+                ? 'bg-white text-[#0a0a0a]'
                 : 'bg-white/90 text-[#0a0a0a] hover:bg-white'
-            } shadow-lg transform hover:scale-110`}
+            } shadow-sm`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={`h-5 w-5 transition-all duration-300 ${
+              className={`h-5 w-5 transition-all duration-200 ${
                 isFavorite(product.product_id) ? 'fill-current' : 'fill-none'
               }`}
               viewBox="0 0 24 24"
@@ -172,19 +149,37 @@ export default function ProductCard({ product, onQuickView }: ProductCardProps) 
           </button>
 
           {/* モテる度バッジ */}
-          <div className="absolute top-4 left-4 px-3 py-1.5 bg-[#d4af37]/95 backdrop-blur-sm text-[#0a0a0a] rounded-lg text-xs font-bold shadow-lg">
+          <div className="absolute top-3 left-3 px-2.5 py-1 bg-white/95 backdrop-blur-sm text-[#0a0a0a] rounded text-xs font-semibold shadow-sm">
             ⭐ {product.moteru_score}
+          </div>
+
+          {/* ホバー時のクイックアクション */}
+          <div className={`absolute inset-0 bg-black/20 flex items-center justify-center gap-2 transition-opacity duration-200 ${
+            hovered ? 'opacity-100' : 'opacity-0'
+          }`}>
+            <button
+              onClick={handleQuickView}
+              className="px-4 py-2 bg-white text-[#0a0a0a] rounded text-sm font-medium hover:bg-gray-100 transition-all shadow-sm"
+            >
+              クイックビュー
+            </button>
+            <button
+              onClick={handleAddToCart}
+              className="px-4 py-2 bg-white text-[#0a0a0a] rounded text-sm font-medium hover:bg-gray-100 transition-all shadow-sm"
+            >
+              カートに追加
+            </button>
           </div>
         </div>
 
         {/* 商品情報 */}
-        <div className="mt-4 space-y-2">
+        <div className="mt-3 space-y-1">
           <div className="flex items-start justify-between gap-2">
             <div className="flex-1 min-w-0">
-              <h3 className="text-[#f5f5f5] font-medium text-sm mb-1 line-clamp-1 group-hover:text-[#d4af37] transition-colors">
+              <h3 className="text-[#f5f5f5] font-medium text-sm mb-0.5 line-clamp-2 group-hover:opacity-70 transition-opacity">
                 {product.name}
               </h3>
-              <p className="text-[#9ca3af] text-xs uppercase tracking-wider">
+              <p className="text-[#9ca3af] text-xs">
                 {product.brand}
               </p>
             </div>
@@ -192,11 +187,11 @@ export default function ProductCard({ product, onQuickView }: ProductCardProps) 
 
           {/* 価格 */}
           <div className="flex items-center justify-between">
-            <p className="text-[#f5f5f5] font-semibold text-lg">
+            <p className="text-[#f5f5f5] font-semibold text-base">
               ¥{product.price.toLocaleString()}
             </p>
             {product.returnable && (
-              <span className="text-[#9ca3af] text-xs">返品可</span>
+              <span className="text-[#6b7280] text-xs">返品可</span>
             )}
           </div>
         </div>

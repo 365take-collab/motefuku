@@ -61,7 +61,7 @@ function EmailForm() {
   if (success && downloadLinks) {
     return (
       <div className="space-y-4">
-        <div className="bg-green-900/30 border border-green-800/50 text-green-400 px-6 py-4 rounded-xl backdrop-blur-sm">
+        <div className="bg-green-900/30 border border-green-800/50 text-green-400 px-6 py-4 rounded-lg">
           <p className="font-semibold mb-2">登録ありがとうございます！</p>
           <p className="text-sm mb-4">以下の特典PDFをダウンロードできます：</p>
           <div className="space-y-2">
@@ -99,7 +99,7 @@ function EmailForm() {
             setSuccess(false)
             setDownloadLinks(null)
           }}
-          className="w-full px-4 py-2 bg-[#2a2a2a] text-[#f5f5f5] rounded-lg text-sm font-medium border border-[#3a3a3a] hover:border-[#d4af37] transition-colors"
+          className="w-full px-4 py-2 bg-[#1a1a1a] text-[#f5f5f5] rounded-lg text-sm font-medium border border-[#2a2a2a] hover:border-[#3a3a3a] transition-colors"
         >
           別のメールアドレスで登録する
         </button>
@@ -110,37 +110,37 @@ function EmailForm() {
   return (
     <form className="space-y-4" onSubmit={handleSubmit}>
       {error && (
-        <div className="bg-red-900/30 border border-red-800/50 text-red-400 px-6 py-4 rounded-xl backdrop-blur-sm">
+        <div className="bg-red-900/30 border border-red-800/50 text-red-400 px-6 py-4 rounded-lg">
           <p className="font-semibold mb-1">エラー</p>
           <p className="text-sm">{error}</p>
         </div>
       )}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-semibold text-[#f5f5f5] mb-2">お名前</label>
+          <label className="block text-sm font-medium text-[#f5f5f5] mb-2">お名前</label>
           <input
             type="text"
             name="name"
             required
             placeholder="山田 太郎"
-            className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#1a1a1a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:border-[#d4af37] transition-all font-medium"
+            className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#0a0a0a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-all"
           />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-[#f5f5f5] mb-2">メールアドレス</label>
+          <label className="block text-sm font-medium text-[#f5f5f5] mb-2">メールアドレス</label>
           <input
             type="email"
             name="email"
             required
             placeholder="example@email.com"
-            className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#1a1a1a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:border-[#d4af37] transition-all font-medium"
+            className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#0a0a0a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-all"
           />
         </div>
       </div>
       <button
         type="submit"
         disabled={loading}
-        className="w-full luxury-button-primary py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full luxury-button-primary py-4 text-base font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {loading ? '登録中...' : '今すぐ無料で特典を受け取る'}
       </button>
@@ -230,8 +230,8 @@ export default function Home() {
     <main className="min-h-screen bg-[#0a0a0a]">
       <Header />
 
-      {/* ヒーローセクション（booking.comスタイル - 検索フォームを最上部に） */}
-      <div className="relative bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#1a1a1a] border-b border-[#2a2a2a]">
+      {/* ヒーローセクション - クリーンでシンプル */}
+      <div className="relative bg-[#0a0a0a] border-b border-[#2a2a2a]">
         <div className="container mx-auto px-6 py-16 max-w-7xl">
           {/* ヒーローテキスト */}
           <div className="text-center mb-12">
@@ -242,60 +242,60 @@ export default function Home() {
               ナンパ師監修のモテるファッション × 複数サイトから最安値を自動比較
             </p>
             
-            {/* 信頼性の証明バッジ（booking.comスタイル） */}
-            <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-[#0a0a0a]/80 backdrop-blur-sm border border-[#2a2a2a] rounded-full shadow-lg">
-                <span className="text-[#d4af37] text-lg">⭐</span>
-                <span className="text-[#f5f5f5] font-semibold">700人実績のナンパ師監修</span>
+            {/* 信頼性の証明バッジ */}
+            <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+              <div className="inline-flex items-center gap-2 px-5 py-2 bg-[#1a1a1a] border border-[#2a2a2a] rounded-full">
+                <span className="text-lg">⭐</span>
+                <span className="text-[#f5f5f5] font-medium text-sm">700人実績のナンパ師監修</span>
               </div>
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-[#0a0a0a]/80 backdrop-blur-sm border border-[#2a2a2a] rounded-full shadow-lg">
-                <span className="text-[#d4af37] text-lg">💰</span>
-                <span className="text-[#f5f5f5] font-semibold">最安値保証</span>
+              <div className="inline-flex items-center gap-2 px-5 py-2 bg-[#1a1a1a] border border-[#2a2a2a] rounded-full">
+                <span className="text-lg">💰</span>
+                <span className="text-[#f5f5f5] font-medium text-sm">最安値保証</span>
               </div>
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-[#0a0a0a]/80 backdrop-blur-sm border border-[#2a2a2a] rounded-full shadow-lg">
-                <span className="text-[#d4af37] text-lg">✓</span>
-                <span className="text-[#f5f5f5] font-semibold">返品可能サイトのみ</span>
+              <div className="inline-flex items-center gap-2 px-5 py-2 bg-[#1a1a1a] border border-[#2a2a2a] rounded-full">
+                <span className="text-lg">✓</span>
+                <span className="text-[#f5f5f5] font-medium text-sm">返品可能サイトのみ</span>
               </div>
             </div>
           </div>
 
-          {/* 検索フォーム（booking.comスタイル - 大きく目立つ） */}
-          <div className="bg-[#0a0a0a] rounded-2xl border-2 border-[#d4af37] shadow-2xl p-8 max-w-5xl mx-auto">
-            <div className="mb-4">
+          {/* 検索フォーム - シンプルで使いやすい */}
+          <div className="bg-[#1a1a1a] rounded-lg border border-[#2a2a2a] shadow-sm p-8 max-w-5xl mx-auto">
+            <div className="mb-6">
               <h2 className="text-2xl font-bold text-[#f5f5f5] mb-2 luxury-heading">コーディネートを探す</h2>
               <p className="text-[#9ca3af] text-sm">シーン、予算、スタイルから最適なコーディネートを見つけましょう</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               <div>
-                <label className="block text-sm font-semibold text-[#f5f5f5] mb-2">シーン</label>
-                <select className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#1a1a1a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:border-[#d4af37] transition-all font-medium">
-                  <option className="bg-[#1a1a1a] text-[#f5f5f5]">シーンを選ぶ</option>
-                  <option className="bg-[#1a1a1a] text-[#f5f5f5]">デート</option>
-                  <option className="bg-[#1a1a1a] text-[#f5f5f5]">仕事</option>
-                  <option className="bg-[#1a1a1a] text-[#f5f5f5]">カジュアル</option>
+                <label className="block text-sm font-medium text-[#f5f5f5] mb-2">シーン</label>
+                <select className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#0a0a0a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-all">
+                  <option>シーンを選ぶ</option>
+                  <option>デート</option>
+                  <option>仕事</option>
+                  <option>カジュアル</option>
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-semibold text-[#f5f5f5] mb-2">予算</label>
-                <select className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#1a1a1a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:border-[#d4af37] transition-all font-medium">
-                  <option className="bg-[#1a1a1a] text-[#f5f5f5]">予算を選ぶ</option>
-                  <option className="bg-[#1a1a1a] text-[#f5f5f5]">5,000円以下</option>
-                  <option className="bg-[#1a1a1a] text-[#f5f5f5]">5,000-10,000円</option>
-                  <option className="bg-[#1a1a1a] text-[#f5f5f5]">10,000-15,000円</option>
-                  <option className="bg-[#1a1a1a] text-[#f5f5f5]">15,000円以上</option>
+                <label className="block text-sm font-medium text-[#f5f5f5] mb-2">予算</label>
+                <select className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#0a0a0a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-all">
+                  <option>予算を選ぶ</option>
+                  <option>5,000円以下</option>
+                  <option>5,000-10,000円</option>
+                  <option>10,000-15,000円</option>
+                  <option>15,000円以上</option>
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-semibold text-[#f5f5f5] mb-2">スタイル</label>
-                <select className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#1a1a1a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:border-[#d4af37] transition-all font-medium">
-                  <option className="bg-[#1a1a1a] text-[#f5f5f5]">スタイルを選ぶ</option>
-                  <option className="bg-[#1a1a1a] text-[#f5f5f5]">カジュアル</option>
-                  <option className="bg-[#1a1a1a] text-[#f5f5f5]">ビジネス</option>
-                  <option className="bg-[#1a1a1a] text-[#f5f5f5]">ストリート</option>
+                <label className="block text-sm font-medium text-[#f5f5f5] mb-2">スタイル</label>
+                <select className="w-full px-4 py-3 border border-[#2a2a2a] rounded-lg bg-[#0a0a0a] text-[#f5f5f5] focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-all">
+                  <option>スタイルを選ぶ</option>
+                  <option>カジュアル</option>
+                  <option>ビジネス</option>
+                  <option>ストリート</option>
                 </select>
               </div>
             </div>
-            <button className="w-full luxury-button-primary py-4 text-lg font-semibold">
+            <button className="w-full luxury-button-primary py-4 text-base font-semibold">
               今すぐ無料でモテるコーディネートを見つける
             </button>
             <p className="text-xs text-center text-[#9ca3af] mt-3">
@@ -305,16 +305,16 @@ export default function Home() {
         </div>
       </div>
 
-      {/* メールフォームセクション（顧客リスト構築 - Phase 1） */}
-      <div className="bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#1a1a1a] border-b border-[#2a2a2a] py-16">
+      {/* メールフォームセクション - クリーンなデザイン */}
+      <div className="bg-[#1a1a1a] border-b border-[#2a2a2a] py-16">
         <div className="container mx-auto px-6 max-w-5xl">
-          <div className="bg-[#0a0a0a] rounded-2xl border-2 border-[#d4af37] shadow-2xl p-8 md:p-12">
+          <div className="bg-[#0a0a0a] rounded-lg border border-[#2a2a2a] shadow-sm p-8 md:p-12">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-[#f5f5f5] mb-4 luxury-heading">
                 今だけ限定！無料特典プレゼント
               </h2>
               <p className="text-xl text-[#9ca3af] mb-2 luxury-text">
-                メールアドレスを登録するだけで、以下の特典を<strong className="text-[#d4af37]">完全無料</strong>で受け取れます
+                メールアドレスを登録するだけで、以下の特典を<strong className="text-[#f5f5f5]">完全無料</strong>で受け取れます
               </p>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-900/30 text-red-400 rounded-lg text-sm font-semibold border border-red-800/50 mt-4">
                 <span>🔥</span>
@@ -322,31 +322,31 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 特典リスト（山積み） */}
+            {/* 特典リスト */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               <div className="flex items-start gap-3 p-4 bg-[#1a1a1a] rounded-lg border border-[#2a2a2a]">
-                <span className="text-[#d4af37] text-2xl">📚</span>
+                <span className="text-2xl">📚</span>
                 <div>
                   <h3 className="text-[#f5f5f5] font-semibold mb-1">モテるコーディネート完全ガイド（PDF）</h3>
-                  <p className="text-[#9ca3af] text-sm">通常3,980円 → <strong className="text-[#d4af37]">無料</strong></p>
+                  <p className="text-[#9ca3af] text-sm">通常3,980円 → <strong className="text-[#f5f5f5]">無料</strong></p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 bg-[#1a1a1a] rounded-lg border border-[#2a2a2a]">
-                <span className="text-[#d4af37] text-2xl">⭐</span>
+                <span className="text-2xl">⭐</span>
                 <div>
                   <h3 className="text-[#f5f5f5] font-semibold mb-1">失敗しない服選び7つのルール（PDF）</h3>
                   <p className="text-[#9ca3af] text-sm">700人実績ナンパ師が教える</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 bg-[#1a1a1a] rounded-lg border border-[#2a2a2a]">
-                <span className="text-[#d4af37] text-2xl">👔</span>
+                <span className="text-2xl">👔</span>
                 <div>
                   <h3 className="text-[#f5f5f5] font-semibold mb-1">シーン別コーディネートテンプレート集（PDF）</h3>
                   <p className="text-[#9ca3af] text-sm">デート・仕事・カジュアル対応</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 bg-[#1a1a1a] rounded-lg border border-[#2a2a2a]">
-                <span className="text-[#d4af37] text-2xl">📧</span>
+                <span className="text-2xl">📧</span>
                 <div>
                   <h3 className="text-[#f5f5f5] font-semibold mb-1">週1回メールマガジン</h3>
                   <p className="text-[#9ca3af] text-sm">最新のモテるファッション情報をお届け</p>
@@ -362,14 +362,14 @@ export default function Home() {
 
       <div className="container mx-auto px-6 py-12 max-w-7xl">
 
-        {/* USPセクション（USP訴求・簡潔版） */}
+        {/* USPセクション */}
         <section className="mb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* 左側: ビジュアル */}
             <div className="order-2 md:order-1">
-              <div className="w-full h-80 bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#1a1a1a] rounded-2xl flex items-center justify-center border border-[#2a2a2a]">
+              <div className="w-full h-80 bg-[#1a1a1a] rounded-lg flex items-center justify-center border border-[#2a2a2a]">
                 <div className="text-center">
-                  <div className="text-8xl mb-4 opacity-40">👔</div>
+                  <div className="text-8xl mb-4 opacity-20">👔</div>
                   <p className="text-sm text-[#9ca3af] font-medium">コーディネート写真</p>
                 </div>
               </div>
@@ -385,15 +385,15 @@ export default function Home() {
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <span className="text-[#d4af37] text-lg mt-0.5">✓</span>
+                  <span className="text-[#f5f5f5] text-lg mt-0.5">✓</span>
                   <span className="text-[#f5f5f5] text-sm">700人という具体的な実績数値</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#d4af37] text-lg mt-0.5">✓</span>
+                  <span className="text-[#f5f5f5] text-lg mt-0.5">✓</span>
                   <span className="text-[#f5f5f5] text-sm">測定可能で信憑性が高い</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#d4af37] text-lg mt-0.5">✓</span>
+                  <span className="text-[#f5f5f5] text-lg mt-0.5">✓</span>
                   <span className="text-[#f5f5f5] text-sm">他のサービスでは真似できない独自の実績</span>
                 </li>
               </ul>
@@ -404,20 +404,20 @@ export default function Home() {
         {/* ローディング */}
         {loading && (
           <div className="text-center py-24">
-            <div className="inline-block animate-spin rounded-full h-12 w-12 border-2 border-[#f5f5f5] border-t-transparent"></div>
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-2 border-[#2a2a2a] border-t-white"></div>
             <p className="text-[#9ca3af] mt-6 luxury-text">読み込み中...</p>
           </div>
         )}
 
         {/* エラー */}
         {error && (
-          <div className="bg-red-900/30 border border-red-800/50 text-red-400 px-6 py-4 rounded-xl mb-6 backdrop-blur-sm">
+          <div className="bg-red-900/30 border border-red-800/50 text-red-400 px-6 py-4 rounded-lg mb-6">
             <p className="font-semibold mb-1">エラー</p>
             <p className="text-sm">{error}</p>
           </div>
         )}
 
-        {/* テンプレート一覧（高級感のあるデザイン） */}
+        {/* テンプレート一覧 */}
         {!loading && !error && (
           <>
             <div className="mb-12">
@@ -433,40 +433,38 @@ export default function Home() {
                   key={template.template_id}
                   className="luxury-card cursor-pointer group"
                 >
-                  {/* 写真エリア（高級感のあるデザイン・黒基調） */}
-                  <div className="luxury-image-overlay w-full h-72 bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#1a1a1a] flex items-center justify-center relative">
+                  {/* 写真エリア - クリーンなデザイン */}
+                  <div className="luxury-image-overlay w-full h-72 bg-[#1a1a1a] flex items-center justify-center relative">
                     <div className="text-center z-10">
-                      <div className="text-7xl mb-3 opacity-40">👔</div>
+                      <div className="text-7xl mb-3 opacity-20">👔</div>
                       <p className="text-xs text-[#9ca3af] font-medium">コーディネート写真</p>
                     </div>
-                    {/* ホバー時のオーバーレイ */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#d4af37]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
 
                   {/* コンテンツエリア */}
-                  <div className="p-7">
+                  <div className="p-6">
                     {/* テンプレート名 */}
                     <h3 className="text-xl font-semibold text-[#f5f5f5] mb-4 line-clamp-1 luxury-heading">
                       {template.name}
                     </h3>
                     
-                    {/* タグ（高級感のあるデザイン・黒基調） */}
+                    {/* タグ */}
                     <div className="flex flex-wrap items-center gap-2 mb-5">
-                      <span className="px-3 py-1.5 bg-[#2a2a2a] text-[#f5f5f5] rounded-lg text-xs font-medium border border-[#3a3a3a]">
+                      <span className="px-3 py-1.5 bg-[#2a2a2a] text-[#f5f5f5] rounded text-xs font-medium border border-[#3a3a3a]">
                         {template.scene}
                       </span>
-                      <span className="px-3 py-1.5 bg-[#2a2a2a] text-[#f5f5f5] rounded-lg text-xs font-medium border border-[#3a3a3a]">
+                      <span className="px-3 py-1.5 bg-[#2a2a2a] text-[#f5f5f5] rounded text-xs font-medium border border-[#3a3a3a]">
                         {template.style}
                       </span>
-                      <span className="px-3 py-1.5 bg-[#2a2a2a] text-[#f5f5f5] rounded-lg text-xs font-medium border border-[#3a3a3a]">
+                      <span className="px-3 py-1.5 bg-[#2a2a2a] text-[#f5f5f5] rounded text-xs font-medium border border-[#3a3a3a]">
                         {template.season}
                       </span>
                     </div>
 
-                    {/* モテる度（高級感のあるデザイン・黒基調） */}
+                    {/* モテる度 */}
                     <div className="flex items-center gap-3 mb-5 pb-5 border-b border-[#2a2a2a]">
                       <div className="flex items-center gap-2">
-                        <span className="text-[#d4af37] text-xl">⭐</span>
+                        <span className="text-xl">⭐</span>
                         <span className="text-[#f5f5f5] font-semibold text-xl luxury-heading">{template.moteru_score}</span>
                       </div>
                       <span className="text-xs text-[#9ca3af] luxury-text">モテる度</span>
@@ -477,7 +475,7 @@ export default function Home() {
                       {template.description}
                     </p>
 
-                    {/* 価格帯（高級感のあるデザイン・黒基調） */}
+                    {/* 価格帯 */}
                     <div className="border-t border-[#2a2a2a] pt-5 mb-5">
                       <p className="text-xs text-[#9ca3af] mb-2 luxury-text uppercase tracking-wider">価格帯</p>
                       <p className="text-2xl font-semibold text-[#f5f5f5] luxury-heading">
@@ -485,15 +483,15 @@ export default function Home() {
                       </p>
                     </div>
 
-                    {/* 最安値バッジとCTA（レスポンスラボ・booking.comスタイル） */}
+                    {/* 最安値バッジとCTA */}
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <span className="inline-flex items-center px-3 py-1.5 bg-green-900/30 text-green-400 rounded-lg text-xs font-semibold border border-green-800/50">
+                        <span className="inline-flex items-center px-3 py-1.5 bg-green-900/30 text-green-400 rounded text-xs font-semibold border border-green-800/50">
                           ✓ 最安値保証
                         </span>
                         <span className="text-xs text-[#9ca3af]">返品可能</span>
                       </div>
-                      {/* 明確なCTAボタン（booking.comスタイル） */}
+                      {/* CTAボタン */}
                       <button className="w-full luxury-button-primary py-3 text-sm font-semibold">
                         今すぐ最安値で購入する（返品保証付き）
                       </button>
@@ -508,9 +506,9 @@ export default function Home() {
           </>
         )}
 
-        {/* ナンパ師のストーリーセクション（Phase 4） */}
+        {/* ナンパ師のストーリーセクション */}
         <section className="mb-24 mt-24">
-          <div className="bg-[#1a1a1a] rounded-2xl border border-[#2a2a2a] p-8 md:p-12">
+          <div className="bg-[#1a1a1a] rounded-lg border border-[#2a2a2a] p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-[#f5f5f5] mb-6 luxury-heading">
@@ -524,7 +522,7 @@ export default function Home() {
                     そこで気づいたのは、「似合う」と「モテる」は全く違うということ。700人以上の実績を積む中で、明確な法則が見えてきました。
                   </p>
                   <p>
-                    <strong className="text-[#d4af37]">「モテる服」には、測定可能な基準がある。</strong>それを体系化し、誰でも再現できるようにしたのが、このサービスです。
+                    <strong className="text-[#f5f5f5]">「モテる服」には、測定可能な基準がある。</strong>それを体系化し、誰でも再現できるようにしたのが、このサービスです。
                   </p>
                   <p>
                     失敗もたくさんありました。でも、その失敗から学んだことが、今の700人という実績につながっています。
@@ -532,9 +530,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-center">
-                <div className="w-full h-80 bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#1a1a1a] rounded-2xl flex items-center justify-center border border-[#2a2a2a]">
+                <div className="w-full h-80 bg-[#0a0a0a] rounded-lg flex items-center justify-center border border-[#2a2a2a]">
                   <div className="text-center">
-                    <div className="text-8xl mb-4 opacity-40">👔</div>
+                    <div className="text-8xl mb-4 opacity-20">👔</div>
                     <p className="text-sm text-[#9ca3af] font-medium">ナンパ師の写真</p>
                   </div>
                 </div>
@@ -543,7 +541,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ソーシャルプルーフセクション（強化版 - Phase 4） */}
+        {/* ソーシャルプルーフセクション */}
         <section className="mb-24">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-[#f5f5f5] mb-4 luxury-heading">
@@ -556,25 +554,25 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-[#d4af37] mb-2">700+</div>
+              <div className="text-4xl font-bold text-[#f5f5f5] mb-2">700+</div>
               <p className="text-[#9ca3af] text-sm">実績人数</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-[#d4af37] mb-2">100%</div>
+              <div className="text-4xl font-bold text-[#f5f5f5] mb-2">100%</div>
               <p className="text-[#9ca3af] text-sm">返品可能サイトのみ</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-[#d4af37] mb-2">4.8</div>
+              <div className="text-4xl font-bold text-[#f5f5f5] mb-2">4.8</div>
               <p className="text-[#9ca3af] text-sm">平均評価（127件）</p>
             </div>
           </div>
 
           {/* 複数の顧客の声 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-[#1a1a1a] rounded-2xl border border-[#2a2a2a] p-6">
+            <div className="bg-[#1a1a1a] rounded-lg border border-[#2a2a2a] p-6">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-[#d4af37] text-lg">⭐</span>
+                  <span key={i} className="text-lg">⭐</span>
                 ))}
               </div>
               <p className="text-[#9ca3af] mb-4 italic leading-relaxed">
@@ -586,10 +584,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-[#1a1a1a] rounded-2xl border border-[#2a2a2a] p-6">
+            <div className="bg-[#1a1a1a] rounded-lg border border-[#2a2a2a] p-6">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-[#d4af37] text-lg">⭐</span>
+                  <span key={i} className="text-lg">⭐</span>
                 ))}
               </div>
               <p className="text-[#9ca3af] mb-4 italic leading-relaxed">
@@ -601,10 +599,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-[#1a1a1a] rounded-2xl border border-[#2a2a2a] p-6">
+            <div className="bg-[#1a1a1a] rounded-lg border border-[#2a2a2a] p-6">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-[#d4af37] text-lg">⭐</span>
+                  <span key={i} className="text-lg">⭐</span>
                 ))}
               </div>
               <p className="text-[#9ca3af] mb-4 italic leading-relaxed">
@@ -618,14 +616,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 価値提案セクション（レスポンスラボ・booking.comスタイル） */}
+        {/* 価値提案セクション */}
         <section className="mb-24">
           <h2 className="text-4xl font-bold text-[#f5f5f5] mb-12 text-center luxury-heading">
             なぜモテ服なのか？
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* 価値提案1: 最安値購入 */}
-            <div className="bg-[#1a1a1a] rounded-2xl border border-[#2a2a2a] p-8 hover:border-[#d4af37] transition-colors">
+            <div className="bg-[#1a1a1a] rounded-lg border border-[#2a2a2a] p-8 hover:border-[#3a3a3a] transition-colors">
               <div className="text-5xl mb-4 text-center">💰</div>
               <h3 className="text-2xl font-bold text-[#f5f5f5] mb-4 text-center luxury-heading">
                 最安値保証
@@ -634,14 +632,14 @@ export default function Home() {
                 「一番安いのはここから買えます」と明確に提示。複数サイトから最安値を自動で比較します。
               </p>
               <div className="text-center">
-                <span className="inline-block px-4 py-2 bg-green-900/30 text-green-400 rounded-lg text-xs font-semibold border border-green-800/50">
+                <span className="inline-block px-4 py-2 bg-green-900/30 text-green-400 rounded text-xs font-semibold border border-green-800/50">
                   最安値保証
                 </span>
               </div>
             </div>
             
             {/* 価値提案2: 返品可能 */}
-            <div className="bg-[#1a1a1a] rounded-2xl border border-[#2a2a2a] p-8 hover:border-[#d4af37] transition-colors">
+            <div className="bg-[#1a1a1a] rounded-lg border border-[#2a2a2a] p-8 hover:border-[#3a3a3a] transition-colors">
               <div className="text-5xl mb-4 text-center">✓</div>
               <h3 className="text-2xl font-bold text-[#f5f5f5] mb-4 text-center luxury-heading">
                 返品可能サイトのみ
@@ -650,14 +648,14 @@ export default function Home() {
                 返品不可サイトを標準で除外。返品の不安を取り除き、安心して購入できます。
               </p>
               <div className="text-center">
-                <span className="inline-block px-4 py-2 bg-blue-900/30 text-blue-400 rounded-lg text-xs font-semibold border border-blue-800/50">
+                <span className="inline-block px-4 py-2 bg-blue-900/30 text-blue-400 rounded text-xs font-semibold border border-blue-800/50">
                   100%返品可能
                 </span>
               </div>
             </div>
             
             {/* 価値提案3: コーディネート全体の最安値 */}
-            <div className="bg-[#1a1a1a] rounded-2xl border border-[#2a2a2a] p-8 hover:border-[#d4af37] transition-colors">
+            <div className="bg-[#1a1a1a] rounded-lg border border-[#2a2a2a] p-8 hover:border-[#3a3a3a] transition-colors">
               <div className="text-5xl mb-4 text-center">🎯</div>
               <h3 className="text-2xl font-bold text-[#f5f5f5] mb-4 text-center luxury-heading">
                 コーディネート全体の最安値
@@ -666,7 +664,7 @@ export default function Home() {
                 各アイテムだけでなく、コーディネート全体の最安値組み合わせを自動計算します。
               </p>
               <div className="text-center">
-                <span className="inline-block px-4 py-2 bg-[#d4af37]/20 text-[#d4af37] rounded-lg text-xs font-semibold border border-[#d4af37]/50">
+                <span className="inline-block px-4 py-2 bg-[#2a2a2a] text-[#f5f5f5] rounded text-xs font-semibold border border-[#3a3a3a]">
                   自動計算
                 </span>
               </div>

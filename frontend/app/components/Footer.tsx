@@ -96,7 +96,7 @@ export default function Footer() {
             <p className="text-sm text-[#9ca3af]">
               © 2025 モテ服. All rights reserved.
             </p>
-            <p className="text-xs text-[#9ca3af] mt-2 md:mt-0">
+            <p className="text-xs text-[#6b7280] mt-2 md:mt-0">
               本サイトはアフィリエイトプログラムを利用しています
             </p>
           </div>
